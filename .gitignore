@@ -1,15 +1,34 @@
-# Python cache
+# 🐍 Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+*.so
 
-# Virtual environment
+# 🔧 Virtual environment
 venv/
+env/
+ENV/
 
-# Logs and binaries
+# 🚫 IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 🔐 Secrets
+*.env
+*.key
+*.pem
+*.crt
+
+# 📁 Logs & Outputs
 logs/
 *.log
 *.bin
+reconstructed_output.*
 
-# OS-specific
-.DS_Store
-Thumbs.db
+# 🧪 Test junk
+*.DS_Store
+*.egg-info/
+
