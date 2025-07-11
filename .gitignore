@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Logs and binaries
+logs/
+*.log
+*.bin
+
+# OS-specific
+.DS_Store
+Thumbs.db
